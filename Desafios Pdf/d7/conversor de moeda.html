@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
+</head>
+
+<body>
+    <h1>Conversor R$ ⟶ US$ </h1>
+
+    <input style="height:50px; width: 200px; ;" type="number" class="numb"
+        placeholder="Valor em R&#x24; a ser convertido.">
+
+    <input type="button" value="Converter" style="height: 50px;" onclick="calcular()">
+
+    <p>
+    <div class="display">Clique no Botão para iniciar.</div>
+    </p>
+
+    <script>
+
+
+
+        function calcular() {
+            var dolar1 = prompt('Antes de Mais nada. Qual e a cotaçao do dollar agora ?');
+            var valor1 = document.querySelector(".numb")
+
+            var dolar = Number(dolar1);
+
+            var valor = Number(valor1.value)
+
+            var converter = valor * dolar;
+
+            let n = Number.parseFloat(converter);
+
+
+
+
+
+
+            console.log(converter)
+
+            var resultados = document.querySelector(".display")
+
+            resultados.innerHTML = `<p>
+                ${n} </p>`
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

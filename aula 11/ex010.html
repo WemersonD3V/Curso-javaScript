@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body><h1>Sistema de mutas</h1>
+   Velocidade do carro: 
+   <input type="number" name="txv" id="txv" > Km/h
+    <input type="button" value="Verificar" onclick="forte()"    >
+    <div id="res"> </div>
+    <script>
+       
+        function forte() {
+            var txtv= window.document.getElementById('txv')    
+        var res= window.document.getElementById('res')
+        var vel = Number(txtv.value)
+        res.innerHTML= (`<p> A velocidade atual do seu carro e de <strong>${vel}<strong> km/h <p> `)
+     
+        if (vel > 60){
+            res.innerHTML += ('<p> Voce foi <strong> MULTADO <strong> por excesso de velocidade <p>')
+                  }
+        res.innerHTML+= ('<p> Dirija com cuidado <p>') // so consegui funcionar o codigop q   uando eu coloquei os () 
+     } 
+    
+       
+    </script>
+</body>
+</html>

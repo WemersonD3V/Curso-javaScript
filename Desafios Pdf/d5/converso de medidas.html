@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+</head>
+
+<body>
+    <h1>Conversor de Medidas</h1>
+    <p>Digite uma distancia em Metros (m)</p>
+
+    <input type="number" class="display">
+
+    <input type="button" value="Somar" class="somar" onclick="calcular()">
+    <div class="res">Resultado</div>
+
+    <script>
+
+        function calcular() {
+            let metro = document.querySelector('.display');
+            let metro1 = Number(metro.value);
+
+            let milimetro = (metro1 / 10 / 10 / 10).toFixed(3);
+            let centimetro = (metro1 / 10 / 10).toFixed(3);
+            let decimetro = (metro1 / 10).toFixed(3);
+
+
+
+            let decametro = Number.parseFloat(metro1 * 10);
+            //decametro1 = Number(decametro);
+            let hectometro = Number.parseFloat(metro1 * 10 * 10);
+            //let hectometro1= Number(hectometro);
+            let Quilometro = Number.parseFloat(metro1 * 10 * 10 * 10);
+
+
+
+
+
+
+
+            let res1 = document.querySelector('.res');
+            res1.innerHTML = `<p>milimetro ${milimetro},centimetro  ${centimetro}, decimetro ${decimetro} metro ${metro1},
+                Decametro ${decametro}, Hectometro ${hectometro}
+                , Quilometros ${Quilometro}</p>`
+
+
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
