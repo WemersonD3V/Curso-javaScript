@@ -1,3 +1,3 @@
 Curso de Java Script
 
-Curso feito no side do cursoemvideo.com
+Curso feito no site do cursoemvideo.com
